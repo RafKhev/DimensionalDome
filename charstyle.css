@@ -1,0 +1,75 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: gray;
+}
+
+* {
+    border: 1px solid red;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "side skill";
+    gap: 10px;
+    width: 85vw;
+    margin-top: 5vh;
+    height: 600px;
+}
+
+.side {
+    grid-area: side;
+    display: block;
+}
+
+.side .imagem {
+    height: 60%;
+    background-color: aqua;
+}
+
+.nome {
+    margin: 5% 0 5% 0; 
+    height: 10%;
+    background-color: purple;
+}
+
+.stats {
+    height: 25%;
+    background-color: bisque;
+}
+
+.habs {
+    grid-area: skill;
+    display: block;
+    background-color: aquamarine;
+    height: 100%;
+}
+
+.skill {
+    
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 0.3fr 1fr;
+    grid-template-areas: "nom nom nom nom nom nom nom" "img desc . . . . . .";
+}
+
+.skill h2{
+    grid-area: nom;
+    background-color: beige;
+}
+
+.skill img{
+    grid-area: img;
+    background-color: blueviolet;
+    float: left;
+}
+
+.skill .txt{
+    grid-area: desc;
+    background-color: chartreuse;
+    float: right;
+}
